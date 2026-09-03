@@ -8,4 +8,4 @@ Place this one in the extension folder,(in own folder named exactly make_story) 
   
 <img src="reference/m_story_demo.png" alt="Demo Image" width="500">  
 
-This is a WIP-there are a few known bugs I am presently squishing, feel free to chime in nevertheless if you do test it/Input is always appreciated :D.
+This is a WIP- though, feel free to chime in nevertheless if you do test it/Input is always appreciated :D.
