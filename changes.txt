@@ -1,0 +1,33 @@
+changes:
+
+looks lika a huge amount, but is less spectacular than one think.
+
+compatibility:
+
+* use load, unload session
+* changed plugin to work with a class to avoid globals (which is most of the change)
+* use same method for importing PySide6 as in other tools
+
+functionality:
+
+* it was supposed to be bound to a class human which always was none.
+  Old makehuman knew a class human, which is mostly our baseclass
+
+  So I added an array of dictionaries inside plugin, which uses basename.name
+  from globals as key. That allows to keep the story inside this plugin
+
+  (loading a character A, then assigning a story, then load B, assign a
+  story, then again A. This would show the entries made for A again, as long as
+  plugin is not closed)
+
+* binding to a 3d object is only a boolean value in json file.
+  here one could think about mention it in mhm file, but that would demand to move the
+  the meta-information into main program.
+  
+
+design:
+
+* stylesheet created invisible QLabels for zodiac and era on bright background. Changing colors
+  this way unfortunately results in problems when background and font have nearly same color.
+  Atm I deleted setStyleSheet. If one needs a certain style sheet it is better to define one
+  in QSS files.
